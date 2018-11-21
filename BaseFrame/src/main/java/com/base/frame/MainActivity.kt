@@ -1,4 +1,4 @@
-package com.lx.base.frame
+package com.base.frame
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

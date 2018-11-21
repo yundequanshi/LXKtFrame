@@ -1,4 +1,4 @@
-package com.lx.base.frame
+package com.base.frame
 
 import org.junit.Test
 
