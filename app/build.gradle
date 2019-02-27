@@ -23,5 +23,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':BaseFrame')
+    implementation 'com.github.yundequanshi:LXKtFrame:V0.0.1-release'
+//    implementation project(':BaseFrame')
 }

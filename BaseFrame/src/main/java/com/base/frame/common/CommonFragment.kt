@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-open class BaseFragment : Fragment() {
+open class CommonFragment : Fragment() {
 
     open var mView: View? = null
 

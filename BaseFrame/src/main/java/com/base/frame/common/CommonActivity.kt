@@ -8,7 +8,7 @@ import android.view.View
 import android.view.WindowManager
 import com.base.frame.utils.SystemBarTintManager
 
-open class BaseActivity : FragmentActivity() {
+open class CommonActivity : FragmentActivity() {
 
     var color: Int = -1
 

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 object HttpFactory {
     var HTTP_HOST_URL = ""
     var httpResponseInterface: HttpResponseInterface? = null
-    val HTTP_CLIENT = Builder().addInterceptor(HttpInterceptor())
+    var HTTP_CLIENT = Builder().addInterceptor(HttpInterceptor())
         .connectTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
         .build()

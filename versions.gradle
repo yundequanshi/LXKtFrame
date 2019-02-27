@@ -25,7 +25,6 @@ versions.keyboardvisibilityevent = "2.2.1"
 versions.checkVersion = "2.1.9"
 
 def build_info = [:]
-build_info.application_id = "com.jnevision.laibobio"
 build_info.min_sdk = 17
 build_info.target_sdk = 28
 build_info.build_tools = "28.0.3"
