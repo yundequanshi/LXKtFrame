@@ -23,7 +23,6 @@ versions.cameraview = "1.6.1"
 versions.glide_transformations = "4.0.1"
 versions.keyboardvisibilityevent = "2.2.1"
 versions.checkVersion = "2.1.9"
-versions.mobSmDK = "2018.0319.1724"
 
 def build_info = [:]
 build_info.application_id = "com.jnevision.laibobio"
@@ -50,7 +49,6 @@ deps.gif = "pl.droidsonroids.gif:android-gif-drawable:$versions.gif"
 deps.glide_transformations = "jp.wasabeef:glide-transformations:$versions.glide_transformations"
 deps.keyboardvisibilityevent = "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:$versions.keyboardvisibilityevent"
 deps.checkVersion = "com.allenliu.versionchecklib:library:$versions.checkVersion"
-deps.mobSmDK = "com.mob.sdk:MobSDK:$versions.mobSmDK"
 
 def kotlin = [:]
 kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
