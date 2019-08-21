@@ -1,14 +1,14 @@
-package com.jnevision.laibobio.common.http
+package com.base.frame.http
 
 import android.text.TextUtils
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.lang.reflect.Type
-
 
 class ResponseConverterFactory : Converter.Factory() {
 
@@ -32,7 +32,7 @@ class ResponseConverterFactory : Converter.Factory() {
 
     private inner class BaseResponseBodyConverter<T>(private val mType: Type) : Converter<ResponseBody, T> {
         override fun convert(response: ResponseBody): T {
-            val mGson = Gson()
+            val mGson: Gson = GsonBuilder().setLenient().create()
             var objectData: T?
             try {
                 val strResponse: String = response.string()

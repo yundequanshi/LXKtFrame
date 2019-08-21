@@ -1,4 +1,4 @@
-package com.jnevision.laibobio.common.http
+package com.base.frame.http
 
 import android.util.Log.d
 import com.blankj.utilcode.util.NetworkUtils

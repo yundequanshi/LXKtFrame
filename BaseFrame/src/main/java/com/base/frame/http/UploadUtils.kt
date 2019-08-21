@@ -1,4 +1,4 @@
-package com.jnevision.laibobio.common.http
+package com.base.frame.http
 
 import okhttp3.RequestBody
 import okhttp3.MultipartBody

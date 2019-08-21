@@ -5,8 +5,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.MainScope
 
-open class CommonFragment : Fragment() {
+open class CommonFragment : Fragment(), CoroutineScope by MainScope()  {
 
     open var mView: View? = null
 

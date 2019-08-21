@@ -1,4 +1,4 @@
-package com.jnevision.laibobio.common.http
+package com.base.frame.http
 
 import io.reactivex.ObservableTransformer
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -32,6 +32,16 @@ object HttpFactory {
             retrofit = Retrofit.Builder().baseUrl(HTTP_HOST_URL)
                 .addConverterFactory(ResponseConverterFactory())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .client(HTTP_CLIENT)
+                .build()
+        }
+        return retrofit!!.create(service)
+    }
+
+    fun <T> getInstanceCoroutine(service: Class<T>): T {
+        if (retrofit == null) {
+            retrofit = Retrofit.Builder().baseUrl(HTTP_HOST_URL)
+                .addConverterFactory(ResponseConverterFactory())
                 .client(HTTP_CLIENT)
                 .build()
         }

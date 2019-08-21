@@ -1,4 +1,4 @@
-package com.jnevision.laibobio.common
+package com.base.frame.entity
 
 import java.io.Serializable
 

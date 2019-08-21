@@ -1,4 +1,4 @@
-package com.jnevision.laibobio.common.http
+package com.base.frame.http
 
 import com.blankj.utilcode.util.ToastUtils
 import io.reactivex.observers.DisposableObserver

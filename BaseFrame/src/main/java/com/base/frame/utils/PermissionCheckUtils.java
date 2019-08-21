@@ -24,7 +24,7 @@ public class PermissionCheckUtils {
     }
 
     public static void requestPhone(final OnPermissionGrantedListener grantedListener,
-                                    final OnPermissionDeniedListener deniedListener) {
+            final OnPermissionDeniedListener deniedListener) {
         request(grantedListener, deniedListener, PermissionConstants.PHONE);
     }
 
@@ -36,14 +36,19 @@ public class PermissionCheckUtils {
         request(listener, PermissionConstants.LOCATION);
     }
 
+    public static void requestByPermissionConstants(final OnPermissionGrantedListener listener,
+            final @PermissionConstants.Permission String... permissions) {
+        request(listener, permissions);
+    }
+
     private static void request(final OnPermissionGrantedListener grantedListener,
-                                final @PermissionConstants.Permission String... permissions) {
+            final @PermissionConstants.Permission String... permissions) {
         request(grantedListener, null, permissions);
     }
 
     private static void request(final OnPermissionGrantedListener grantedListener,
-                                final OnPermissionDeniedListener deniedListener,
-                                final @PermissionConstants.Permission String... permissions) {
+            final OnPermissionDeniedListener deniedListener,
+            final @PermissionConstants.Permission String... permissions) {
         PermissionUtils.permission(permissions)
                 .rationale(new PermissionUtils.OnRationaleListener() {
                     @Override
@@ -74,16 +79,20 @@ public class PermissionCheckUtils {
     }
 
     public interface OnPermissionGrantedListener {
+
         void onPermissionGranted();
     }
 
     public interface OnPermissionDeniedListener {
+
         void onPermissionDenied();
     }
 
     private static void showRationaleDialog(final PermissionUtils.OnRationaleListener.ShouldRequest shouldRequest) {
         Activity topActivity = ActivityUtils.getTopActivity();
-        if (topActivity == null) return;
+        if (topActivity == null) {
+            return;
+        }
         new AlertDialog.Builder(topActivity)
                 .setTitle("权限提示")
                 .setMessage("请同意授权，否则该功能无法正常使用！")
@@ -107,7 +116,9 @@ public class PermissionCheckUtils {
 
     private static void showOpenAppSettingDialog() {
         Activity topActivity = ActivityUtils.getTopActivity();
-        if (topActivity == null) return;
+        if (topActivity == null) {
+            return;
+        }
         new AlertDialog.Builder(topActivity)
                 .setTitle("权限提示")
                 .setMessage("我们需要您拒绝的某些权限或系统无法应用失败，请手动设置为页面授权，否则该功能无法正常使用！")

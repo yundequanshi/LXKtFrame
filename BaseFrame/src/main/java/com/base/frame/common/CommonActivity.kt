@@ -7,8 +7,10 @@ import android.support.v4.app.FragmentActivity
 import android.view.View
 import android.view.WindowManager
 import com.base.frame.utils.SystemBarTintManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.MainScope
 
-open class CommonActivity : FragmentActivity() {
+open class CommonActivity : FragmentActivity(), CoroutineScope by MainScope() {
 
     var color: Int = -1
 
